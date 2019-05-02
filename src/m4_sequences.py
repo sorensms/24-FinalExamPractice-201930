@@ -6,8 +6,8 @@ This problem provides practice at:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and MAddie Sorensen.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -110,6 +110,13 @@ def run_test_practice_problem4a():
 
 
 def practice_problem4a(sequence):
+    sum=[]
+    for k in range(len(sequence)-1):
+        if sequence[k]==sequence[k+1]:
+            sum=sum+[k]
+    return sum
+
+
     """
     What comes in: A non-empty sequence.
     What goes out: Returns a list of integers,
@@ -135,7 +142,7 @@ def practice_problem4a(sequence):
       :type sequence: list | tuple | string
     """
     ###########################################################################
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     ###########################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -181,6 +188,18 @@ def run_test_practice_problem4b():
 
 
 def practice_problem4b(sequence):
+    b=-10000000000000
+    for k in range(0,len(sequence),2):
+        if sequence[k]>b:
+            b=sequence[k]
+    return(b)
+
+
+
+
+
+
+
     """
     What comes in:
       A sequence of numbers, where the length of the sequence >= 2.
@@ -198,7 +217,7 @@ def practice_problem4b(sequence):
       :type sequence: (list | tuple) of (float | int)
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ###########################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
