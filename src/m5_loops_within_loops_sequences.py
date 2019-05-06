@@ -6,8 +6,8 @@ This problem provides practice at:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and MAddie Sorensen.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -39,7 +39,7 @@ def main():
 def run_test_integers():
     """ Tests the    integers    function. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # Done: 2. Implement this TEST function.
     #   It TESTS the  integers  function defined below.
     #   Include at least ** 1 ** ADDITIONAL test beyond those we wrote.
     #
@@ -72,8 +72,30 @@ def run_test_integers():
     print('Expected is:', expected)
     print('Actual is:  ', answer)
 
+    # Test 2:
+    expected = [6, 4, 7, 2, 1, 4, 101, 376, 36, 2, 136, -76]
+    answer = integers([(6,4,7,2, 1, 4),
+                       (101, 'girl', 376),
+                       [1.789, 2.5, 36, 2],
+                       'bye',
+                       [],
+                       ['boys'],
+                       [[7], [4]],
+                       [136, -76]
+                       ])
+    print('Expected is:', expected)
+    print('Actual is:  ', answer)
+
 
 def integers(sequence_of_sequences):
+    new=[]
+    for k in range(len(sequence_of_sequences)):
+        short=sequence_of_sequences[k]
+        for m in range (len(short)):
+            if type(short[m]) is int:
+                new=new+[short[m]]
+    return new
+
     """
     Returns a new list that contains all the integers
     in the subsequences of the given sequence, in the order that they
@@ -96,7 +118,7 @@ def integers(sequence_of_sequences):
       :rtype: list of int
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
     ###########################################################################

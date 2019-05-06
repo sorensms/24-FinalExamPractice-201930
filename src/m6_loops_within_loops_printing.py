@@ -6,8 +6,8 @@ This problem provides practice at:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Maddie Sorensen.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -56,6 +56,13 @@ def run_test_shape():
 
 
 def shape(r):
+    for k in range(r):
+        print((r-k)*' ')
+        print((r-k)*'+')
+        print('!')
+        for m in range(r):
+            print(r-m)
+        print('-'*k)
     """
     Prints a shape with r rows that looks like this example where r=7:
     +++++++!7654321
