@@ -57,12 +57,13 @@ def run_test_shape():
 
 def shape(r):
     for k in range(r):
-        print((r-k)*' ')
-        print((r-k)*'+')
-        print('!')
-        for m in range(r):
-            print(r-m)
-        print('-'*k)
+        print((k)*' ', end='')
+        print((r-k)*'+', end='')
+        print('!', end='')
+        for m in range(r-k,0,-1):
+            print(m, end='')
+        print('-'*k, end='')
+        print()
     """
     Prints a shape with r rows that looks like this example where r=7:
     +++++++!7654321
